@@ -6,13 +6,13 @@ from fastapi import FastAPI
 from pydantic.dataclasses import dataclass  # 
 
 
-@dataclass
+#@dataclass
 class Vehicle:
     vehicle: str
     brand: str
     year: int
     description: Union[str, None] = None
-    is_sold: Optional[bool] = Field(False, title='Is Sold')    
+    # is_sold: Optional[bool] = Field(False, title='Is Sold')    
     created: datetime
     updated: datetime
 
@@ -22,7 +22,7 @@ app = FastAPI()
 def root():
     return {"message": "vehicle API"}
 
-app.get("/vehicles/", response_model=List[vehicle])  # 
+app.get("/vehicles/", response_model=List[Vehicle])  # 
 def get_vehicles():  # 
     return [  # 
         {
