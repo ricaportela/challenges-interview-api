@@ -30,7 +30,7 @@ def get_vehicles():  #
             "brand": "volkswagem",
             "year": "1996",
             "description": "bom estado, zerada",
-            "is_sold": "True",
+            #"is_sold": "True",
             "created": "01/01/2022",
             "updated": "01/01/2022",
 
